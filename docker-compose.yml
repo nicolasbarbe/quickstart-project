@@ -1,0 +1,15 @@
+author:
+  build: .
+  command: run
+  ports:
+    - "3000:8080"
+  environment:
+    - INSTANCE_TYPE=author_derby
+
+public:
+  build: .
+  command: run
+  ports:
+    - "3001:8080"
+  environment:
+    - INSTANCE_TYPE=public_derby
