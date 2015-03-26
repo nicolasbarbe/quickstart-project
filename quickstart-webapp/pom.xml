@@ -14,14 +14,16 @@
     <!-- Add your project specific dependencies here: -->
 
     <!-- Overlay Magnolia Empty Webapp. Alternatively, use the bundled-webapp or the enterprise-webapp. Dependencies versions are already imported by parent, so no need to replicate here. -->
+
+</dependency>
     <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-empty-webapp</artifactId>
+      <groupId>info.magnolia.bundle</groupId>
+      <artifactId>magnolia-bundled-webapp</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>info.magnolia</groupId>
-      <artifactId>magnolia-empty-webapp</artifactId>
+      <groupId>info.magnolia.bundle</groupId>
+      <artifactId>magnolia-bundled-webapp</artifactId>
       <type>war</type>
     </dependency>
   </dependencies>
