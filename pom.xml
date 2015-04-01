@@ -30,6 +30,18 @@
         <scope>import</scope>
       </dependency>
 
+      <dependency>
+        <groupId>info.magnolia.evaluation</groupId>
+        <artifactId>quickstart-templates</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>info.magnolia</groupId>
+        <artifactId>magnolia-rendering</artifactId>
+        <version>5.3.5</version>
+      </dependency>
+
       <!-- TEST -->
       <dependency>
         <groupId>junit</groupId>

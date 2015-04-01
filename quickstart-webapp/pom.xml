@@ -21,12 +21,20 @@
       <artifactId>magnolia-bundled-webapp</artifactId>
       <type>pom</type>
     </dependency>
+    
     <dependency>
       <groupId>info.magnolia.bundle</groupId>
       <artifactId>magnolia-bundled-webapp</artifactId>
       <type>war</type>
     </dependency>
+
+    <dependency>
+        <groupId>info.magnolia.evaluation</groupId>
+        <artifactId>quickstart-templates</artifactId>
+    </dependency>
   </dependencies>
+
+
 
   <build>
     <plugins>
@@ -38,5 +46,12 @@
         </configuration>
       </plugin>
     </plugins>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 </project>
