@@ -1,25 +1,41 @@
-author:
+authorDebug:
   image: nicolasbarbe/magnolia-base-debug
   ports:
-    - "3000:8080"
-    - "3001:1099"
-    - "3002:1043"
+    - "9090:8080"
+    - "1099:1099"
+    - "1043:1043"
   environment:
     - INSTANCE_TYPE=author_derby
     - MAGNOLIA_HOME=/var/data
   volumes:
     - ./quickstart-webapp/target/quickstart-webapp-1.0-SNAPSHOT:/var/lib/tomcat7/webapps/ROOT
-    - ~/data/quickstart-project:/var/data
+    - /magnolia/data/quickstart-project/authorDebug:/var/data
     - .:/var/src
 
+author:
+  image: nicolasbarbe/magnolia-base
+  ports:
+    - "8090:8080"
+  environment:
+    - INSTANCE_TYPE=author_derby
+    - MAGNOLIA_HOME=/var/data
+  volumes:
+    - ./quickstart-webapp/target/quickstart-webapp-1.0-SNAPSHOT:/var/lib/tomcat7/webapps/ROOT
+    - /magnolia/data/quickstart-project/author:/var/data
 
-# public:
-#   build: .
-#   command: run
-#   ports:
-#     - "3001:8080"
-#   environment:
-#     - INSTANCE_TYPE=public_derby
+public:
+  image: nicolasbarbe/magnolia-base
+  ports:
+    - "80:8080"
+  environment:
+    - INSTANCE_TYPE=public_derby
+    - MAGNOLIA_HOME=/var/data
+  volumes:
+    - ./quickstart-webapp/target/quickstart-webapp-1.0-SNAPSHOT:/var/lib/tomcat7/webapps/ROOT
+    - /magnolia/data/quickstart-project/public:/var/data
+
+
+
 # public:
 #   build: .
 #   command: run

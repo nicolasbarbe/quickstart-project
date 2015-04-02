@@ -49,16 +49,12 @@ import javax.jcr.RepositoryException;
 
 public class NavigationModel  <RD extends TemplateDefinition> extends AbstractSTKTemplateModel<TemplateDefinition> {
 
-    static {
-        System.out.println("ewrwef ew fwe fwefweewewf fewf qewfwe");
-    }
-
+  
     public NavigationModel(Node content, TemplateDefinition definition, RenderingModel<?> parent, STKTemplatingFunctions stkFunctions, TemplatingFunctions templatingFunctions) {
         super(content, definition, parent, stkFunctions, templatingFunctions);
     }
 
     public List<Node> getSections() throws Exception{
-        System.out.print(getString());
         Node siteRoot;
         try {
             siteRoot = templatingFunctions.root(content, "mgnl:page");
@@ -79,8 +75,5 @@ public class NavigationModel  <RD extends TemplateDefinition> extends AbstractST
         return ancestors.get(ancestors.size() - 2);
     }
 
-    public String getString() {
-        return "tes999999";
-    }
 
 }

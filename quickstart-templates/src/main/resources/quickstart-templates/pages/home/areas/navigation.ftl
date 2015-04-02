@@ -3,7 +3,7 @@
     <div class="container-fluid"></div>
 
         <div class="navbar-header">
-           <a class="navbar-brand" href="#">Project5 Name</a>
+           <a class="navbar-brand" href="#">Project Name</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
