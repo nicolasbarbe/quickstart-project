@@ -31,7 +31,7 @@
     <sv:value>/quickstart-templates/pages/home/main.ftl</sv:value>
   </sv:property>
   <sv:property sv:name="title" sv:type="String">
-    <sv:value>Quickstart Home Paged </sv:value>
+    <sv:value>Quickstart Home Page</sv:value>
   </sv:property>
   <sv:property sv:name="visible" sv:type="String">
     <sv:value>true</sv:value>
