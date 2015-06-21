@@ -11,9 +11,11 @@
       <param name="validationQuery" value="select 1"/>
     </DataSource>
   </DataSources>
+
   <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
-    <param name="path" value="${rep.home}/repository" />
+    <param name="path" value="/var/data/magnolia/repository" />
   </FileSystem>
+
   <Security appName="magnolia">
     <SecurityManager class="org.apache.jackrabbit.core.DefaultSecurityManager"/>
     <AccessManager class="org.apache.jackrabbit.core.security.DefaultAccessManager">
@@ -22,11 +24,14 @@
     <LoginModule class="info.magnolia.jaas.sp.jcr.JackrabbitAuthenticationModule">
     </LoginModule>
   </Security>
+
   <DataStore class="org.apache.jackrabbit.core.data.FileDataStore">
-    <param name="path" value="${rep.home}/repository/datastore"/>
+    <param name="path" value="/var/data/magnolia/repository/datastore"/>
     <param name="minRecordLength" value="1024"/>
   </DataStore>
+
   <Workspaces rootPath="${rep.home}/workspaces" defaultWorkspace="default" />
+
   <Workspace name="default">
     <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
       <param name="path" value="${wsp.home}/default" />
@@ -64,6 +69,7 @@
       <AccessControlProvider class="info.magnolia.cms.core.MagnoliaAccessProvider" />
     </WorkspaceSecurity>
   </Workspace>
+
   <Versioning rootPath="${rep.home}/version">
     <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
       <param name="path" value="${rep.home}/workspaces/version" />
@@ -73,4 +79,13 @@
       <param name="schemaObjectPrefix" value="version_" />
     </PersistenceManager>
   </Versioning>
+
+  <Cluster syncDelay="2000">
+    <Journal class="org.apache.jackrabbit.core.journal.DatabaseJournal">
+      <param name="dataSourceName" value="magnolia"/>
+      <param name="schemaObjectPrefix" value="journal_" />
+      <param name="janitorEnabled" value="false" />
+    </Journal>
+  </Cluster>
+
 </Repository>
