@@ -13,7 +13,7 @@
   </DataSources>
 
   <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
-    <param name="path" value="/var/data/magnolia/repository" />
+    <param name="path" value="${rep.home}/repository" />
   </FileSystem>
 
   <Security appName="magnolia">
@@ -26,7 +26,7 @@
   </Security>
 
   <DataStore class="org.apache.jackrabbit.core.data.FileDataStore">
-    <param name="path" value="/var/data/magnolia/repository/datastore"/>
+    <param name="path" value="${rep.home}/repository/datastore"/>
     <param name="minRecordLength" value="1024"/>
   </DataStore>
 
@@ -60,10 +60,7 @@
       <param name="extractorPoolSize" value="3" />
       <param name="extractorTimeout" value="100" />
       <param name="extractorBackLogSize" value="100" />
-      <!-- needed to highlight the searched term -->
-      <param name="supportHighlighting" value="true"/>
-      <!-- custom provider for getting an HTML excerpt in a query result with rep:excerpt() -->
-      <param name="excerptProviderClass" value="info.magnolia.jackrabbit.lucene.SearchHTMLExcerpt"/>
+
     </SearchIndex>
     <WorkspaceSecurity>
       <AccessControlProvider class="info.magnolia.cms.core.MagnoliaAccessProvider" />

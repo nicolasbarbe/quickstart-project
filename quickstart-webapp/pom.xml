@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>info.magnolia.evaluation</groupId>
+    <groupId>info.magnolia.services</groupId>
     <artifactId>quickstart-project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
@@ -15,8 +15,21 @@
 
     <!-- Overlay Magnolia Empty Webapp. Alternatively, use the bundled-webapp or the enterprise-webapp. Dependencies versions are already imported by parent, so no need to replicate here. -->
 
-
     <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-empty-webapp</artifactId>
+      <type>pom</type>
+    </dependency>
+    
+    <dependency>
+      <groupId>info.magnolia</groupId>
+      <artifactId>magnolia-empty-webapp</artifactId>
+      <type>war</type>
+    </dependency>
+
+
+
+    <!-- <dependency>
       <groupId>info.magnolia.bundle</groupId>
       <artifactId>magnolia-bundled-webapp</artifactId>
       <type>pom</type>
@@ -27,11 +40,25 @@
       <artifactId>magnolia-bundled-webapp</artifactId>
       <type>war</type>
     </dependency>
+ -->
+
+
 
     <dependency>
-        <groupId>info.magnolia.evaluation</groupId>
-        <artifactId>quickstart-templates</artifactId>
+      <groupId>info.magnolia.services</groupId>
+      <artifactId>quickstart-templates</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.services</groupId>
+      <artifactId>subscriber-rest-endpoint</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>info.magnolia.services</groupId>
+      <artifactId>healthcheck</artifactId>
+    </dependency>
+
   </dependencies>
 
 

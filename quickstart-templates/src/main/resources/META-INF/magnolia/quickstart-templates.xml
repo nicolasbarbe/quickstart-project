@@ -4,8 +4,8 @@
   <name>quickstart-templates</name>
   <displayName>${project.name}</displayName>
   <description>${project.description}</description>
-  <class>info.magnolia.evaluation.QuickstartTemplatesModule</class>
-  <versionHandler>info.magnolia.evaluation.setup.QuickstartTemplatesModuleVersionHandler</versionHandler>
+  <class>info.magnolia.services.quickstart.QuickstartTemplatesModule</class>
+  <versionHandler>info.magnolia.services.quickstart.setup.QuickstartTemplatesModuleVersionHandler</versionHandler>
   <version>${project.version}</version>
 
   <dependencies>

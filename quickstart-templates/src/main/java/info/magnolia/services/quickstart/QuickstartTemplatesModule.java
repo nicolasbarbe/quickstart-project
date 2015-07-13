@@ -1,4 +1,4 @@
-package info.magnolia.evaluation;
+package info.magnolia.services.quickstart;
 
 /**
  * This class is optional and represents the configuration for the quickstart-templates module.
