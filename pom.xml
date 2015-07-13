@@ -14,9 +14,9 @@
 
   <!-- Fill the following in, so you can use the release plugin -->
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <url>https://github.com/nicolasbarbe/quickstart-project</url>
+    <connection>scm:git:git://github.com:nicolasbarbe/quickstart-project.git</connection>
+    <developerConnection>scm:git:git@github.com:nicolasbarbe/quickstart-project.git</developerConnection>
   </scm>
 
   <dependencyManagement>
