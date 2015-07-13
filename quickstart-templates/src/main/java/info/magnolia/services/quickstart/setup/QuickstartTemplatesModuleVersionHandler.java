@@ -1,4 +1,4 @@
-package info.magnolia.evaluation.setup;
+package info.magnolia.services.quickstart.setup;
 
 import info.magnolia.module.DefaultModuleVersionHandler;
 
@@ -8,5 +8,7 @@ import info.magnolia.module.DefaultModuleVersionHandler;
  * If you don't need this, simply remove the reference to this class in the module descriptor xml.
  */
 public class QuickstartTemplatesModuleVersionHandler extends DefaultModuleVersionHandler {
+
+
 
 }

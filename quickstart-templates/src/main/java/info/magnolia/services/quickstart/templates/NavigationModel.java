@@ -31,27 +31,29 @@
  * intact.
  *
  */
-package info.magnolia.evaluation.templates;
+package info.magnolia.services.quickstart.templates;
 
-import info.magnolia.module.templatingkit.functions.STKTemplatingFunctions;
-import info.magnolia.module.templatingkit.templates.AbstractSTKTemplateModel;
 import info.magnolia.rendering.model.RenderingModel;
+import info.magnolia.rendering.model.RenderingModelImpl;
 import info.magnolia.rendering.template.TemplateDefinition;
 import info.magnolia.templating.functions.TemplatingFunctions;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.jcr.Node;
-import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 
+import com.google.inject.Inject;
 
-public class NavigationModel  <RD extends TemplateDefinition> extends AbstractSTKTemplateModel<TemplateDefinition> {
 
-  
-    public NavigationModel(Node content, TemplateDefinition definition, RenderingModel<?> parent, STKTemplatingFunctions stkFunctions, TemplatingFunctions templatingFunctions) {
-        super(content, definition, parent, stkFunctions, templatingFunctions);
+public class NavigationModel  <RD extends TemplateDefinition> extends RenderingModelImpl<TemplateDefinition> {
+
+    protected  TemplatingFunctions templatingFunctions;
+
+    @Inject
+    public NavigationModel(Node content, TemplateDefinition definition, RenderingModel<?> parent, TemplatingFunctions templatingFunctions) {
+        super(content, definition, parent);
+        this.templatingFunctions = templatingFunctions;
     }
 
     public List<Node> getSections() throws Exception{
